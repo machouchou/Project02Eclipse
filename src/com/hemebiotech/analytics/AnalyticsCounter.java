@@ -1,12 +1,18 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
+import java.util.Map;
+
+import com.hemebiotech.analytics.interfaces.ISymptomCounter;
+import com.hemebiotech.analytics.interfaces.ISymptomReader;
 
 public class AnalyticsCounter {
 	
 	public void analyse() {
-		ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile("symptoms.txt");
+		ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
 		List<String> symptomList = reader.getSymptoms();
 		
-	}
+		ISymptomCounter counter = new SymptomCounter();
+		Map<String, Integer> mapSymptoms = counter.countSymptoms(symptomList);
+	} 
 }

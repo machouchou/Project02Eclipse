@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hemebiotech.analytics.interfaces.ISymptomReader;
+
 /**
  * Simple brute force implementation
  *
