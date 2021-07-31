@@ -29,6 +29,9 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		super();
 	}
 
+	/**
+	 * @see com.hemebiotech.analytics.ISymptomReader#getSymptoms()
+	 */
 	@Override
 	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();

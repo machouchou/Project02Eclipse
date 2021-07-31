@@ -17,6 +17,10 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 		this.resultFile = resultFile;
 	}
 
+	/**
+	 * @see com.hemebiotech.analytics.ISymptomWriter#writeSymptoms(Map<String, Integer> symptomMap)
+	 */
+	@Override
 
 	public void writeSymptoms(Map<String, Integer> symptomMap) {
 		
