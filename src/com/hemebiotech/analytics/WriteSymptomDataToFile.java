@@ -18,7 +18,8 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	}
 
 	/**
-	 * @see com.hemebiotech.analytics.ISymptomWriter#writeSymptoms(Map<String, Integer> symptomMap)
+	 * @see com.hemebiotech.analytics.interfaces.ISymptomWriter#writeSymptoms(Map<String, Integer> symptomMap)
+	 * This method writes symptoms list in order with occurrence in a file stored in the property resultFile
 	 */
 	@Override
 

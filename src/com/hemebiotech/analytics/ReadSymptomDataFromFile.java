@@ -18,19 +18,14 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	
 	/**
 	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 * @param filepathVariable a full or partial path to file with symptom strings in it, one per line
 	 */
 	public ReadSymptomDataFromFile(String filepathVariable) {
 		this.filepath = filepathVariable;
 	}
-	
-	
-	public ReadSymptomDataFromFile() {
-		super();
-	}
 
 	/**
-	 * @see com.hemebiotech.analytics.ISymptomReader#getSymptoms()
+	 * @see com.hemebiotech.analytics.interfaces.ISymptomReader#getSymptoms()
 	 */
 	@Override
 	public List<String> getSymptoms() {

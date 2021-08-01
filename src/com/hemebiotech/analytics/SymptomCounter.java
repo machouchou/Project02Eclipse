@@ -9,7 +9,9 @@ import com.hemebiotech.analytics.interfaces.ISymptomCounter;
 public class SymptomCounter implements ISymptomCounter {
 
 	/**
-	 * @see com.hemebiotech.analytics.ISymptomCounter#countSymptoms(List)
+	 * @see com.hemebiotech.analytics.interfaces.ISymptomCounter#countSymptoms(List)
+	 * countSymptoms counts a list of symptoms and returns an ordered map whith each symptom as key 
+	 * and its occurrence as value.  
 	 */
 	@Override
 	public Map<String, Integer> countSymptoms(List<String> symptoms) {
