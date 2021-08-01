@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hemebiotech.analytics.interfaces.ISymptomReader;
+
 /**
  * Simple brute force implementation
  *
@@ -16,14 +18,17 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	
 	/**
 	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 * @param filepathVariable a full or partial path to file with symptom strings in it, one per line
 	 */
-	public ReadSymptomDataFromFile (String filepath) {
-		this.filepath = filepath;
+	public ReadSymptomDataFromFile(String filepathVariable) {
+		this.filepath = filepathVariable;
 	}
-	
+
+	/**
+	 * @see com.hemebiotech.analytics.interfaces.ISymptomReader#getSymptoms()
+	 */
 	@Override
-	public List<String> GetSymptoms() {
+	public List<String> getSymptoms() {
 		ArrayList<String> result = new ArrayList<String>();
 		
 		if (filepath != null) {
